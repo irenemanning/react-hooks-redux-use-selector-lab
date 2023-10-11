@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-
-import usersReducer from "./features/users/usersSlice";
+import store from "./store"
+// import usersReducer from "./features/users/usersSlice";
+import { Provider } from "react-redux";
 
 // add imports and code
-
 ReactDOM.render(
-  // add imports and code
-  <App />,
+  <Provider store={store}>
+     <App />
+  </Provider>,
   // add imports and code
   document.getElementById("root")
 );
